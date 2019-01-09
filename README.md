@@ -5,8 +5,11 @@ cd projects
 git clone https://github.com/kanndide/docker-rails-postgres-template.git app-name
 cd app-name
 rm -rf .git
+# If Windows 
+rm .git -Force
 docker-compose run app rails new . --force --database=postgresql --skip-bundle --api
 # Edit Gemfile to include jbuilder gem
+mv database.yml config/database.yml
 docker-compose build
 docker-compose up
 # localhost:3001
