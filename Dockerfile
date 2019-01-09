@@ -1,5 +1,5 @@
 FROM ruby:2.6-alpine
-RUN apk update && apk add nodejs build-base libxml2-dev libxslt-dev
+RUN apk update && apk add nodejs build-base postgresql-dev
 
 RUN mkdir /railsapp
 WORKDIR /railsapp
