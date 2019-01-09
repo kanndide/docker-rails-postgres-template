@@ -20,3 +20,19 @@ docker-compose run --rm app rake db:migrate
 # GET http://localhost:3001/posts.json
 # POST http://localhost:3001/posts.json with JSON body
 ```
+
+### Testing API with Postman or other API testing tool
+
+Send GET request to localhost:3001/posts.json
+You should receive a '[]' in response.
+Next, send a POST request to localhost:3001/posts.json with a json body
+```
+{
+    "post": {
+        "title": "Post 1",
+        "body": "Some example content."
+    }
+}
+```
+Confirm a response back for creating a post.
+Send a GET requests back to localhost:3001/posts.json and you should receive the post back in a JSON response.
